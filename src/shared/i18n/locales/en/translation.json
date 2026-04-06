@@ -1,0 +1,14 @@
+{
+  "meta":{
+    "title": "Sebastián Martínez - Software Developer"
+  },
+  "home": {
+    "title": "Hi, I'm Sebastián",
+    "subtitle": "Software Developer"
+  },
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "contact": "Contact"
+  }
+}

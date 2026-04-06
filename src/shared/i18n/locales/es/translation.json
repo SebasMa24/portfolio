@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "Sebastián Martínez - Desarrollador de software"
+  },
+  "home": {
+    "title": "Hola, soy Sebastián",
+    "subtitle": "Desarrollador de software"
+  },
+  "nav": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  }
+}
