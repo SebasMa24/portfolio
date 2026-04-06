@@ -3,11 +3,14 @@
     "title": "Sebastián Martínez - Desarrollador de software"
   },
   "home": {
-    "title": "Hola, soy Sebastián",
-    "subtitle": "Desarrollador de software"
+    "title": "Sebastián Martínez",
+    "subtitle": "Desarrollador de software",
+    "description": "Ingeniero de sistemas y desarrollador backend junior, con enfoque en desarrollo web y construcción de soluciones backend robustas y escalables. Tengo experiencia con diferentes tecnologías, bases de datos y herramientas de desarrollo, lo que me permite adaptarme a distintos entornos y retos.",
+    "technologies": "Tecnologías"
   },
   "nav": {
     "home": "Inicio",
+    "education": "Educación",
     "projects": "Proyectos",
     "contact": "Contacto"
   }

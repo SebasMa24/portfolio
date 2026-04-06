@@ -3,11 +3,14 @@
     "title": "Sebastián Martínez - Software Developer"
   },
   "home": {
-    "title": "Hi, I'm Sebastián",
-    "subtitle": "Software Developer"
+    "title": "Sebastián Martínez",
+    "subtitle": "Software Developer",
+    "description": "System Engineer and junior backend developer, focused on web development and building robust and scalable backend solutions. I have experience with various technologies, databases, and development tools, which allows me to adapt to different environments and challenges.",
+    "technologies": "Technologies"
   },
   "nav": {
     "home": "Home",
+    "education": "Education",
     "projects": "Projects",
     "contact": "Contact"
   }

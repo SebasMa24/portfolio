@@ -4,14 +4,18 @@ import './styles/global.css'
 import './shared/i18n/config.ts'
 import Header from './layouts/Header.tsx'
 import Hero from './components/Hero.tsx'
+import Card from './components/Card.tsx'
 import Footer from './layouts/Footer.tsx'
 
 createRoot(document.getElementById('root')!).render(
   
   <StrictMode>
-    <Header />
+    <div className='sticky'> 
+      <Header />
+    </div>
+    
     <main className="min-h-screen">
-        {
+        { 
           <Hero />
         }
     </main>
