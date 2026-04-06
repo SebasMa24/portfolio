@@ -1,6 +1,3 @@
-import {useTranslation} from "react-i18next";
-
-
 type CardProps = {
   image: string;
   title: string;

@@ -1,10 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './styles/global.css'
+import './styles/index.css'
 import './shared/i18n/config.ts'
 import Header from './layouts/Header.tsx'
 import Hero from './components/Hero.tsx'
-import Card from './components/Card.tsx'
 import Footer from './layouts/Footer.tsx'
 
 createRoot(document.getElementById('root')!).render(
