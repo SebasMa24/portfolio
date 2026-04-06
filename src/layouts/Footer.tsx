@@ -15,6 +15,9 @@ export default function Footer() {
           <a href="#home" className="hover:text-blue-600">
             {t("nav.home")}
           </a>
+          <a href="#education" className="hover:text-blue-600 dark:text-gray-300">
+            {t("nav.education")}
+          </a>
           <a href="#projects" className="hover:text-blue-600 dark:text-gray-300">
             {t("nav.projects")}
           </a>

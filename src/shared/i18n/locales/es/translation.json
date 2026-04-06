@@ -13,5 +13,37 @@
     "education": "Educación",
     "projects": "Proyectos",
     "contact": "Contacto"
+  },
+  "projects": {
+    "title": "Projects",
+    "Four-Parks": {
+      "title": "Four-Parks",
+      "description": "Desarrollé en conjunto un sistema de reservas de parqueaderos que permite a los usuarios buscar y reservar espacios de forma rápida y eficiente. Incluye un módulo de gestión para administradores, permitiendo controlar disponibilidad, tarifas y acceso mediante una interfaz intuitiva y funcionalidades robustas."
+    },
+    "GestorDBE-commerce": {
+      "title": "Gestor de Bases de datos para sistema e-commerce",
+      "description": "Desarrollé un backend para una plataforma e-commerce con arquitectura híbrida de datos, integrando PostgreSQL para información estructurada y MongoDB para datos no relacionales. Implementé servicios REST con FastAPI, mejoré el rendimiento con caché en Redis y utilicé Docker para contenerizar los servicios y facilitar el despliegue."
+    },
+    "IntegraServiciosUD": {
+      "title": "IntegraServiciosUD",
+      "description": "Desarrollé un sistema de integración de servicios para la Universidad Distrital, para la reserva de implementos y espacios fisicos, utilizando una arquitectura de microservicios con Spring Boot, y una base de datos relacional con PostgreSQL, implementando autenticación con JWT."
+    },
+    "SistemaIoTDeteccionFugasGas": {
+      "title": "Sistema IoT para detección de fugas de gas",
+      "description": "Desarrollé un sistema en tiempo real para monitorear fugas de gas en edificios, utilizando sensores conectados a una red IoT y notificando alertas en una dashboard web (Grafana)."
+    },
+    "VotacionSenado" :{
+      "title": "Votación Senado",
+      "description": "Desarrollé un sistema de votación electrónica para el Senado, utilizando una arquitectura de servicios con Spring Boot, y una base de datos relacional con PostgreSQL, implementando autenticación con JWT, adicionalmente se desarrollo un sistema de auditoría para garantizar la integridad y transparencia del proceso de votación, utilizando técnicas de hashing y registros inmutables para asegurar que los votos no puedan ser alterados o eliminados después de ser emitidos."
+    }
+  },
+  "education": {
+    "title": "Educación",
+    "degree": "Ingeniero de Sistemas",
+    "technician": "Técnico en Desarrollo de Software"
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "¡No dudes en contactarme por correo electrónico o a través de mis redes sociales!"
   }
 }

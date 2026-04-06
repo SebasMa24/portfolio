@@ -13,5 +13,37 @@
     "education": "Education",
     "projects": "Projects",
     "contact": "Contact"
+  },
+  "education": {
+    "title": "Education",
+    "degree": "Bachelor's Degree in Systems Engineering",
+    "technician": "Software Development Technician"
+  },
+  "projects": {
+    "title": "Projects",
+    "Four-Parks": {
+      "title": "Four-Parks",
+      "description": "I co-developed a parking reservation system that allows users to search and book spaces quickly and efficiently. It includes a management module for administrators, enabling them to control availability, rates, and access through an intuitive interface and robust functionalities."
+    },
+    "GestorDBE-commerce": {
+      "title": "Database Manager for e-commerce system",
+      "description": "I developed a backend for an e-commerce platform with a hybrid data architecture, integrating PostgreSQL for structured information and MongoDB for unstructured data. I implemented REST services with FastAPI, improved performance with Redis caching, and used Docker to containerize the services and facilitate deployment."
+    },
+    "IntegraServiciosUD": {
+      "title": "IntegraServiciosUD",
+      "description": "I developed a service integration system for the Universidad Distrital, for the reservation of equipment and physical spaces, using a microservices architecture with Spring Boot, and a relational database with PostgreSQL, implementing authentication with JWT."
+    },
+    "SistemaIoTDeteccionFugasGas": {
+      "title": "IoT System for Gas Leak Detection",
+      "description": "I developed a real-time system to monitor gas leaks in buildings, using sensors connected to an IoT network and notifying alerts on a web dashboard (Grafana)."
+    },
+    "VotacionSenado" :{
+      "title": "Senate Voting",
+      "description": "I developed an electronic voting system for the Senate, using a service architecture with Spring Boot, and a relational database with PostgreSQL, implementing authentication with JWT. Additionally, an audit system was developed to ensure the integrity and transparency of the voting process, using hashing techniques and immutable records to ensure that votes cannot be altered or deleted after being cast."
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Feel free to reach out to me via email or through my social media channels!"
   }
 }

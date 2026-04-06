@@ -18,10 +18,10 @@ export default function Hero() {
             </div>
         </div>
         <div className="flex flex-col items-center w-full max-w-4xl mx-auto gap-8 px-4">
-            <h2 className="text-lg text-gray-600 dark:text-gray-300 mt-4">{t("home.technologies")}</h2>
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-white ">{t("home.technologies")}</h2>
             <div className="grid grid-cols-3 md:grid-cols-9 gap-4 w-full">
-                <Card image={"https://cdn-icons-png.flaticon.com/512/226/226777.png"} title={'Java'} description={''} />
-                <Card image={"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png"} title={'Python'} description={''} />
+                <Card image={"https://cdn-icons-png.flaticon.com/512/226/226777.png"} title={'Java'} description={''}/>
+                <Card image={"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png"} title={'Python'} description={''}/>
                 <Card image={"https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"} title={'JavaScript'} description={''} />
                 <Card image={"https://img.icons8.com/color/200/spring-logo.png"} title={'Spring'} description={''} />
                 <Card image={"https://www.svgrepo.com/show/353657/django-icon.svg"} title={'Django'} description={''} />
