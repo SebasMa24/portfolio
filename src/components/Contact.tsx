@@ -18,7 +18,7 @@ export default function Contact() {
                 dark:hover:bg-slate-700 dark:bg-slate-600 dark:text-white transition">
                         LinkedIn
                     </a>
-                    <a href="https://github.com/luismartinez24210" target="_blank" className="px-4 py-2 rounded-lg bg-slate-200 text-black hover:bg-slate-400 
+                    <a href="https://github.com/SebasMa24" target="_blank" className="px-4 py-2 rounded-lg bg-slate-200 text-black hover:bg-slate-400 
                 dark:hover:bg-slate-700 dark:bg-slate-600 dark:text-white transition">
                         GitHub
                     </a>
