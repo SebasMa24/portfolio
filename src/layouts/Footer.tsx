@@ -1,37 +1,29 @@
-import { useTranslation } from "react-i18next";
-
 export default function Footer() {
-    const { t } = useTranslation();
-    return (
-    <footer className="w-full bg-white dark:bg-gray-500 mt-10">
-      <div className="max-w-6xl mx-auto p-6 flex flex-col md:flex-row justify-between items-center gap-4 ">
-        
-        <p className="text-sm text-gray-600 dark:text-gray-300">
-          © {new Date().getFullYear()} Sebastian Martinez
+  return (
+    <footer className="border-t border-line dark:border-line mt-24">
+      <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p className="font-mono text-xs text-muted">
+          &copy; {new Date().getFullYear()} Sebasti&aacute;n Mart&iacute;nez
         </p>
-
-        {/* Links */}
-        <div className="flex gap-4 text-sm text-gray-600 dark:text-gray-300">
-          <a href="#home" className="hover:text-blue-600">
-            {t("nav.home")}
+        <div className="flex gap-6">
+          <a
+            href="https://www.linkedin.com/in/luis-sebastian-martinez-guerrero-85b085161/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-xs uppercase tracking-widest text-muted hover:text-accent transition-colors no-underline"
+          >
+            LinkedIn
           </a>
-          <a href="#education" className="hover:text-blue-600 dark:text-gray-300">
-            {t("nav.education")}
+          <a
+            href="https://github.com/SebasMa24"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-xs uppercase tracking-widest text-muted hover:text-accent transition-colors no-underline"
+          >
+            GitHub
           </a>
-          <a href="#projects" className="hover:text-blue-600 dark:text-gray-300">
-            {t("nav.projects")}
-          </a>
-          <a href="#contact" className="hover:text-blue-600 dark:text-gray-300">
-            {t("nav.contact")}
-          </a>
-        </div>
-
-        {/* Redes*/}
-        <div className="flex gap-4 text-sm dark:text-gray-300">
-          <a href="https://www.linkedin.com/in/luis-sebastian-martinez-guerrero-85b085161/" target="_blank" className="hover:text-blue-600">LinkedIn</a>
-          <a href="https://github.com/SebasMa24" className="hover:text-blue-600" target="_blank" >GitHub</a>
         </div>
       </div>
     </footer>
-    );
+  );
 }

@@ -3,29 +3,36 @@ import { useTranslation } from "react-i18next";
 import ThemeToggle from "../components/ThemeToggle";
 
 export default function Header() {
-    const { t } = useTranslation();
-    return ( 
-    <header className="w-full max-w-xl mx-auto bg-white dark:bg-gray-500 rounded-lg mt-4 px-4">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-4 p-4">
-        <nav className="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-gray-700 dark:text-gray-300">
-          <a href="#home" className="hover:text-blue-600">
-            {t("nav.home")}
-          </a>
-          <a href="#education" className="hover:text-blue-600">
-            {t("nav.education")}
-          </a>
-          <a href="#projects" className="hover:text-blue-600">
-            {t("nav.projects")}
-          </a>
-          <a href="#contact" className="hover:text-blue-600">
-            {t("nav.contact")}
-          </a>
+  const { t } = useTranslation();
+  const links = [
+    { href: "#home", label: t("nav.home") },
+    { href: "#education", label: t("nav.education") },
+    { href: "#projects", label: t("nav.projects") },
+    { href: "#contact", label: t("nav.contact") },
+  ];
+
+  return (
+    <header className="fixed top-0 inset-x-0 z-50 bg-paper/80 dark:bg-paper/80 backdrop-blur-sm">
+      <div className="max-w-6xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between">
+        <a href="#home" className="font-display text-sm font-semibold tracking-tight text-ink dark:text-ink no-underline shrink-0">
+          SM<span className="text-accent">.</span>
+        </a>
+        <nav className="flex items-center gap-2 md:gap-5 flex-nowrap">
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="font-mono text-[11px] md:text-xs uppercase tracking-wider md:tracking-widest text-muted hover:text-accent transition-colors no-underline whitespace-nowrap"
+            >
+              {link.label}
+            </a>
+          ))}
+          <div className="flex items-center gap-1 ml-1 md:ml-2 shrink-0">
+            <ThemeToggle />
+            <LanguageSwitcher />
+          </div>
         </nav>
-        <div className="flex items-center gap-2">
-          <ThemeToggle />
-          <LanguageSwitcher />
-        </div>
       </div>
     </header>
-    );
+  );
 }

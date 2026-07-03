@@ -1,4 +1,4 @@
-import {LuMoon, LuSun} from "react-icons/lu";
+import { LuMoon, LuSun } from "react-icons/lu";
 import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
@@ -8,20 +8,21 @@ export default function ThemeToggle() {
 
   useEffect(() => {
     if (theme) {
-      document.documentElement.classList.add(theme);
+      document.documentElement.classList.add("dark");
       localStorage.setItem("theme", theme);
-    }
-    else {
+    } else {
       document.documentElement.classList.remove("dark");
       localStorage.removeItem("theme");
     }
   }, [theme]);
 
   return (
-    <button 
-      className="h-full rounded-xl ml-2 p-2 flex justify-center items-center dark:hover:bg-slate-600 hover:bg-slate-300 transition" 
-      onClick={() => setTheme(theme === "dark" ? "" : "dark")}>
-      {theme === "dark" ? <LuSun size={24} color="white"/> : <LuMoon size={24}/>}
+    <button
+      className="text-muted hover:text-accent transition-colors p-1"
+      onClick={() => setTheme(theme === "dark" ? "" : "dark")}
+      aria-label="Toggle theme"
+    >
+      {theme === "dark" ? <LuSun size={16} /> : <LuMoon size={16} />}
     </button>
   );
 }

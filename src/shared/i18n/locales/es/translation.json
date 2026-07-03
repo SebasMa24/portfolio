@@ -15,7 +15,7 @@
     "contact": "Contacto"
   },
   "projects": {
-    "title": "Projects",
+    "title": "Proyectos",
     "Four-Parks": {
       "title": "Four-Parks",
       "description": "Desarrollé en conjunto un sistema de reservas de parqueaderos que permite a los usuarios buscar y reservar espacios de forma rápida y eficiente. Incluye un módulo de gestión para administradores, permitiendo controlar disponibilidad, tarifas y acceso mediante una interfaz intuitiva y funcionalidades robustas."

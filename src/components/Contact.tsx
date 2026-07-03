@@ -1,38 +1,60 @@
-import CvEs from "../assets/Sebastian Martinez - Desarrollador Backend - CV.pdf"
-import CvEn from "../assets/Sebastian Martinez - Backend Developer - CV.pdf"
+import CvEs from "../assets/Sebastian Martinez - Desarrollador Backend - CV.pdf";
+import CvEn from "../assets/Sebastian Martinez - Backend Developer - CV.pdf";
 import { useTranslation } from "react-i18next";
 
-export default function Contact() {
-    const { t } = useTranslation(); 
-    return (
-        <div id="contact" className="flex flex-col mt-10">
-            <div className="flex flex-col items-center  w-full max-w-4xl mx-auto gap-8 px-4">
-                <h2 className="text-2xl font-bold text-gray-800 dark:text-white "> {t("contact.title")} </h2>
-                <p className="text-sm text-gray-600 dark:text-gray-300"> {t("contact.description")} </p>
-                <div className="flex flex-col md:flex-row gap-4">
-                    <a href="mailto:luismartinez24210@gmail.com" className="px-4 py-2 rounded-lg bg-slate-200 text-black hover:bg-slate-400 
-                dark:hover:bg-slate-700 dark:bg-slate-600 dark:text-white transition">
-                        Email
-                    </a>
-                    <a href="https://www.linkedin.com/in/luis-sebastian-martinez-guerrero-85b085161/" target="_blank" className="px-4 py-2 rounded-lg bg-slate-200 text-black hover:bg-slate-400 
-                dark:hover:bg-slate-700 dark:bg-slate-600 dark:text-white transition">
-                        LinkedIn
-                    </a>
-                    <a href="https://github.com/SebasMa24" target="_blank" className="px-4 py-2 rounded-lg bg-slate-200 text-black hover:bg-slate-400 
-                dark:hover:bg-slate-700 dark:bg-slate-600 dark:text-white transition">
-                        GitHub
-                    </a>
-                    <a href={CvEs} download className="px-4 py-2 rounded-lg bg-slate-200 text-black hover:bg-slate-400 
-                dark:hover:bg-slate-700 dark:bg-slate-600 dark:text-white transition text-center">
-                        Descargar CV (ES)
-                    </a>
+const links = [
+  { href: "mailto:luismartinez24210@gmail.com", label: "Email" },
+  {
+    href: "https://www.linkedin.com/in/luis-sebastian-martinez-guerrero-85b085161/",
+    label: "LinkedIn",
+  },
+  { href: "https://github.com/SebasMa24", label: "GitHub" },
+];
 
-                    <a href={CvEn} download className="px-4 py-2 rounded-lg bg-slate-200 text-black hover:bg-slate-400 
-                dark:hover:bg-slate-700 dark:bg-slate-600 dark:text-white transition text-center">
-                        Download CV (EN)
-                    </a>
-                </div>
-            </div>
+export default function Contact() {
+  const { t } = useTranslation();
+  return (
+    <section id="contact" className="py-16 md:py-24">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex items-center gap-3 mb-10">
+          <span className="w-2 h-2 rounded-full bg-accent shrink-0" />
+          <h2 className="font-display text-2xl md:text-3xl font-semibold tracking-tight text-ink dark:text-ink">
+            {t("contact.title")}
+          </h2>
         </div>
-    );
+
+        <p className="font-body text-base md:text-lg text-muted max-w-lg mb-8">
+          {t("contact.description")}
+        </p>
+
+        <div className="flex flex-wrap gap-3">
+          {links.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target={link.href.startsWith("mailto") ? undefined : "_blank"}
+              rel={link.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
+              className="inline-flex items-center px-4 py-2 rounded-full bg-surface dark:bg-surface border border-line dark:border-line font-mono text-xs text-ink dark:text-ink hover:border-accent hover:text-accent transition-colors no-underline"
+            >
+              {link.label}
+            </a>
+          ))}
+          <a
+            href={CvEs}
+            download
+            className="inline-flex items-center px-4 py-2 rounded-full bg-surface dark:bg-surface border border-line dark:border-line font-mono text-xs text-ink dark:text-ink hover:border-accent hover:text-accent transition-colors no-underline"
+          >
+            CV (ES)
+          </a>
+          <a
+            href={CvEn}
+            download
+            className="inline-flex items-center px-4 py-2 rounded-full bg-surface dark:bg-surface border border-line dark:border-line font-mono text-xs text-ink dark:text-ink hover:border-accent hover:text-accent transition-colors no-underline"
+          >
+            CV (EN)
+          </a>
+        </div>
+      </div>
+    </section>
+  );
 }

@@ -8,7 +8,10 @@ type CardProps = {
   github: string;
 };
 
-export default function Card({
+const tags = (str: string) =>
+  str.split(" - ").filter(Boolean);
+
+export default function CardLong({
   image,
   title,
   description,
@@ -18,41 +21,64 @@ export default function Card({
   github,
 }: CardProps) {
   return (
-    <div className="flex flex-col md:flex-row items-center bg-white dark:bg-gray-500 rounded-xl shadow-md hover:shadow-lg transition p-4">
-      <img
-        className="object-cover w-full rounded-xl h-64 md:h-full md:w-96 mb-4 md:mb-0 object-cover object-center hover:scale-105 transition duration-300"
-        src={image}
-        alt={title}
-      ></img>
-      <div className="flex flex-col justify-between md:p-4 leading-normal text-black dark:text-white">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-heading">
+    <article className="grid md:grid-cols-5 gap-6 md:gap-8 items-start">
+      <div className="md:col-span-2 overflow-hidden rounded-lg border border-line dark:border-line bg-surface dark:bg-surface">
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-56 md:h-48 object-cover object-center"
+        />
+      </div>
+      <div className="md:col-span-3">
+        <h3 className="font-display text-xl font-semibold tracking-tight text-ink dark:text-ink">
           {title}
-        </h5>
-        <div className="flex gap-1">
-          {frontend && frontend.trim() !== "" && (
-           <a href={frontend} className="text-body text-sm mb-1 hover:text-blue-600">
-            Frontend
-          </a>
-          )}
-           {backend && backend.trim() !== "" && (
-          <a href={backend} className="text-body text-sm mb-1 hover:text-blue-600">
-            Backend
-          </a>
-          )}
-           {github && github.trim() !== "" && (
-          <a href={github} className="text-body text-sm mb-1 hover:text-blue-600">
-            GitHub
-          </a>
-          )}
-        </div>
-       
-        <p className="text-body">
-          {technology}
-        </p>
-        <p className="mb-6 text-body">
+        </h3>
+        <p className="font-body text-sm md:text-base leading-relaxed text-muted mt-3">
           {description}
         </p>
+        <div className="flex flex-wrap gap-2 mt-4">
+          {tags(technology).map((t) => (
+            <span
+              key={t}
+              className="px-2.5 py-1 rounded-full bg-surface dark:bg-surface border border-line dark:border-line font-mono text-[11px] text-muted"
+            >
+              {t}
+            </span>
+          ))}
+        </div>
+        <div className="flex flex-wrap gap-4 mt-4">
+          {frontend && (
+            <a
+              href={frontend}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-xs text-accent hover:text-accent/80 transition-colors no-underline"
+            >
+              Frontend &rarr;
+            </a>
+          )}
+          {backend && (
+            <a
+              href={backend}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-xs text-accent hover:text-accent/80 transition-colors no-underline"
+            >
+              Backend &rarr;
+            </a>
+          )}
+          {github && (
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-xs text-accent hover:text-accent/80 transition-colors no-underline"
+            >
+              GitHub &rarr;
+            </a>
+          )}
+        </div>
       </div>
-    </div>
+    </article>
   );
 }
